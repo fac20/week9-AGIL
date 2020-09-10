@@ -15,6 +15,7 @@ function createSignUpForm() {
         "form",
         {
           id: "signupForm",
+          class: "allForms",
           onsubmit: (event) => {
             event.preventDefault();
             const username = document.querySelector("#username").value;

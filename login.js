@@ -29,7 +29,8 @@ function displayLogin(){
 function createLoginForm() {
     return h(
         "form", {
-        id: "loginForm", // correct id??
+        id: "loginForm", 
+        class: "allForms",
         onsubmit: (event) => {
             event.preventDefault();
             const email = event.target.elements.email.value;
