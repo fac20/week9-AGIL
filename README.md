@@ -1,16 +1,45 @@
-# week9-AGIL
+# FLYING SAUCERS/ CYBERSPACE NOMADS
+### Your go to website for out of this world travel destinations!
 
-A single-page app which uses the endpoints of a [travel destinations API]() we created last week. See project brief [here](https://founders-and-coders.gitbook.io/coursebook/curriculum/single-page-app/project)
+<MARQUEE>![Outer space-pana (1)](https://user-images.githubusercontent.com/59174800/92815374-15997080-f3bc-11ea-9092-22fe714d3890.png)
+</MARQUEE>
 
-## Action points from previous SGCs
-- take more breaks 
+A single-page app which uses the endpoints of a [travel destinations API]() we created last week.
+ See project brief [here](https://founders-and-coders.gitbook.io/coursebook/curriculum/single-page-app/project
+
+
+### Abduction guidelines:
+- *Clone* this repo
+- Run npm install
+- Start live server to view the site on your browser
+
+## Action points from previous contact's SGC
+- Take more breaks 
 - Drawing out file structure
-- set out a clear plan of action from the start ? like step by step so we always know which tasks need doing in which order
+- Set out a clear plan of action from the start ? like step by step so we always know which tasks need doing in which order
 - Read previous weeks SGCs
 - Reading conventional commits article and implementing it.
 
-## Team roles 
+## Prototype:
 
+
+
+
+### Acceptance Criteria
+
+- [ ] A single-page app
+- [ ] Accessible signup/login forms
+- [ ] Token-based authentication with storage in localStorage
+- [ ] Form for adding new resources
+- [ ] Works well across Chrome, Firefox and Safari/Edge browsers
+
+#### Stretch criteria
+
+- [ ] Buttons to delete existing resources
+- [ ] Form for updating existing resources 
+
+
+## The mad scientists: 
 Facilitator: Amber   
 Design: Terry   
 Deployment: Jessica  
@@ -19,8 +48,7 @@ Quality: Khadija
 ## Crazy 8s
 ![Screenshot 2020-09-10 at 23 16 46](https://user-images.githubusercontent.com/36554605/92815036-c2272280-f3bb-11ea-9d16-f53472657bb7.png)
 
-## Wireframe
-
+## Prototype
 ### Mobile 
 ![Screenshot 2020-09-10 at 23 07 36](https://user-images.githubusercontent.com/36554605/92814657-5e9cf500-f3bb-11ea-853e-4a74b612e652.png)
 
