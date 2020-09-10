@@ -1,3 +1,5 @@
+import displayAll from "./displayAll.js"
+
 import h from "./create-element.js";
 
 const app = document.querySelector(".app");
