@@ -24,7 +24,7 @@ function createIndex() {
                 displaySignup()
             
         }, "Sign up")
-    )
+    );
 }
 
 

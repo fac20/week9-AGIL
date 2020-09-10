@@ -1,6 +1,6 @@
-import displayAll from "./displayAll.js"
-
 import h from "./create-element.js";
+import request from "./api.js"
+import displayAll from "./displayAll.js"
 
 const app = document.querySelector(".app");
 
@@ -62,14 +62,14 @@ function createSignUpForm() {
 
 
 function signup(username, age, email, password) {
-    return fetch("https://destinationapiagil.herokuapp.com/signup", {
+    return request("https://destinationapiagil.herokuapp.com/signup", {
       method: "POST",
       headers: {"content-type": "application/json"},
       body:  JSON.stringify({username, age, email, password})
     })
     .then(token => {
       console.log(token)
-      window.localStorage.setItem("access_token", token)
+      window.localStorage.setItem("access_token", token.access_token)
       displayAll()
     })
     .catch(error => console.error(error))
