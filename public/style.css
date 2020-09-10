@@ -98,7 +98,6 @@ animation-iteration-count: infinite;
     }
 }
 
-
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -123,7 +122,6 @@ animation-iteration-count: infinite;
 	position: absolute;
 	bottom: 0;
 }
-
 
 #stars {
 	width: 5px;
