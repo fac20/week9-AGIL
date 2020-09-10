@@ -1,24 +1,28 @@
 import h from "./create-element.js";
 
-console.log("signup");
 const app = document.querySelector(".app");
 
-const signupEl = displaySignUp();
+const signupEl = createSignUpForm();
 
-app.append(signupEl);
+function displaySignup() {
+    app.innerHTML="";
+  app.append(signupEl);
+}
 
-function displaySignUp() {
-    return h("div", {class: "content"}, h(
+
+function createSignUpForm() {
+    return h(
         "form",
         {
           id: "signupForm",
           onsubmit: (event) => {
             event.preventDefault();
-            const username = event.target.elements.value;
-            const age = event.target.elements.value;
-            const email = event.target.elements.email.value;
-            const password = event.target.elements.password.value;
-            signup(username, age, email, password)
+            const username = document.querySelector("#username").value;
+            const age = document.querySelector("#age").value;
+            const email = document.querySelector("#email").value;
+            const password = document.querySelector("#password").value;
+            console.log(username, age, email, password);
+            signup(username, age, email, password);
           },
         },
         h("label", { for: "username" }, "Username"), 
@@ -51,10 +55,22 @@ function displaySignUp() {
           "aria-label": "Password",
         }),
         h("button", {}, "Sign Up")
-      ));
+      );
 }
 
 
-function signup() {
-    
+function signup(username, age, email, password) {
+    return fetch("https://destinationapiagil.herokuapp.com/signup", {
+      method: "POST",
+      headers: {"content-type": "application/json"},
+      body:  JSON.stringify({username, age, email, password})
+    })
+    .then(token => {
+      console.log(token)
+      window.localStorage.setItem("access_token", token)
+      displayAll()
+    })
+    .catch(error => console.error(error))
 }
+
+export { displaySignup, signup };

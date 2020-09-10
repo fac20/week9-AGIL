@@ -16,5 +16,5 @@ export function h(tag, props, ...children) {
     return el;
   }
 
-//   export default h;
+export default h;
 
