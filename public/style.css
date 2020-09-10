@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'spacesuit';
+    src: url('spacesuit.ttf');
+}
+
+@font-face {
+    font-family: 'newspace';
+    src: url('new_space.ttf');
+}
+
+h1 {
+    /* font-weight: bold; */
+    font-family: 'spacesuit';
+}
+
+button {
+    background-color: black;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    color: cyan;
+    /* font-weight: bold; */
+    font-family: 'newspace';
+    margin: 10px;
+    font-size: 20px;
+}
