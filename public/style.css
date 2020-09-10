@@ -14,6 +14,7 @@ h1 {
     text-align: center;
     font-size: 6rem;
     cursor: url(http://www.rw-designer.com/cursor-extern.php?id=82447), auto;
+    color: white;
 }
 
 button {
@@ -37,14 +38,9 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
 }
 
-
-
-
-/* label {
-    display: inline-block;
-} */
 
 input {
     width: 40%;
@@ -92,49 +88,86 @@ animation-iteration-count: infinite;
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-
-
-
-
-/* 
-@import "susy";
-@import "compass/reset";
-
-.stars, .twinkling, .clouds {
-	position:absolute;
-	display:block;
-	top:0; bottom:0;
-	left:0; right:0;
-	width:100%; height:100%;
+@keyframes particleAnimation
+{
+    from {
+        left: -100px;
+    }
+    to {
+        left: calc( 100% + 100px );
+    }
 }
 
 
-.stars {
-	z-index: 0;
-	background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
-    z-index: 9999;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-.twinkling {
-	z-index: 1;
-	background:transparent url('https://image.ibb.co/ir1DE8/twinkling.png') repeat top center;
-    animation: move-twink-back 200s linear infinite;
-  
+#bg {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom, #0E1428, #222E50, #E0A890);
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
 
-.clouds{
+#bg::before {
+	content: " ";
 	z-index: 2;
-    background:transparent url('https://image.ibb.co/bT4N7T/clouds.png') repeat top center;
-    animation: move-clouds-back 200s linear infinite;
-  
+	background-color: #222E50;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
 }
 
-@keyframes move-twink-back {
-	from {background-position:0 0;}
-	to {background-position:-10000px 5000px;}
+
+#stars {
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: white;
+	position: absolute;
+	animation-iteration-count: infinite;
+	animation-name: twinkle;
 }
 
-@keyframes move-clouds-back {
-	from {background-position:0 0;}
-	to {background-position:10000px 0;}
-} */
+.star-a {
+	top: 50px;
+	left: 50px;
+	animation-duration: 1s;
+}
+
+.star-b {
+	top: 100px;
+	left: 400px;
+	animation-duration: 0.8s;
+}
+
+.star-c {
+	top: 80px;
+	right: 700px;
+	animation-duration: 0.75s;
+}
+
+.star-d {
+	top: 50px;
+	right: 400px;
+	animation-duration: 1.1s;
+}
+
+.star-e {
+	top: 60px;
+	right: 100px;
+	animation-duration: 0.6s;
+}
+
+@keyframes twinkle {
+	50% { 
+		transform: scale(0.5); 
+		opacity: 0.5;
+	}
+}
