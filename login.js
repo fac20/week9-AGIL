@@ -1,4 +1,7 @@
 import h from "./create-element.js";
+import displayAll from "./displayAll.js";
+import {login} from "./api.js";
+
 // renders inital page with login and signup buttons
 const app = document.querySelector(".app");
 
@@ -36,14 +39,15 @@ function createLoginForm() {
             const email = event.target.elements.email.value;
             const password = event.target.elements.password.value;
             login(email, password)
-            // .then((token) => {
-            //     window.localStorage.setItem("user-token", user.access_token);
+            .then((token) => {
+                console.log(token);
+                window.localStorage.setItem("user-token", token);
 
-            //     const message = h("span", {}, `Greetings Earthling ${user.name}!`);
-            //     welcome.innerHTML = "";
-            //     welcome.append(message, logout);
-            //     loginForm.replaceWith(welcome);
-            // });
+                const message = h("span", {}, `Greetings Earthling!`);
+                welcome.innerHTML = "";
+                welcome.append(message);
+                loginForm.replaceWith(welcome);
+            });
         },
     },
         h("label", { for: "email" }, "Email"),
@@ -65,9 +69,7 @@ function createLoginForm() {
     );
 }
 
-function login(){
-    console.log("login");
-}
+
 
 
 
@@ -84,4 +86,4 @@ function login(){
 //     );
 // }
 
-export { displayLogin, login };
+export { displayLogin };

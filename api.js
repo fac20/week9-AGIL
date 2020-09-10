@@ -1,8 +1,9 @@
 // Request() to stop rewriting the same code over again
 // We will always want to  Check if the response is O.K, handle error and return / etract the JSON resonse body
-function request(url, options) {
+export function request(url, options) {
     return fetch(url, options).then((response) => {
-        if (!Response.ok) {
+        console.log(response)
+        if (!response.ok) {
             const error = new Error("Uh oh there's an HTTP Error :(");
             error.status = response.status;
             throw error;

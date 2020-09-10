@@ -1,5 +1,5 @@
-import {displaySignup, signup} from "./signUp.js"
-import {displayLogin, login} from "./login.js"
+import {displaySignup} from "./signUp.js"
+import {displayLogin } from "./login.js"
 import { h } from "./create-element.js"
 
 const app = document.querySelector(".app");
