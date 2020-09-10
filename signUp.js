@@ -1,7 +1,14 @@
 import h from "./create-element.js";
 
+console.log("signup");
+const app = document.querySelector(".app");
+
+const signupEl = displaySignUp();
+
+app.append(signupEl);
+
 function displaySignUp() {
-    return h(
+    return h("div", {class: "content"}, h(
         "form",
         {
           id: "signupForm",
@@ -44,7 +51,7 @@ function displaySignUp() {
           "aria-label": "Password",
         }),
         h("button", {}, "Sign Up")
-      );
+      ));
 }
 
 

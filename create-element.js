@@ -15,3 +15,6 @@ function h(tag, props, ...children) {
     el.append(...children);
     return el;
   }
+
+  export default h;
+
