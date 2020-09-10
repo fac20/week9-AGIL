@@ -1,13 +1,12 @@
-import { login, getUser } from "./api.js";
+import h from "./create-element.js";
+// renders inital page with login and signup buttons
+const app = document.querySelector(".app");
+
 // Creating global variables
 // loginForm variable is created and assigned the value returned from running the loginform() function
-const loginForm = loginForm();
+const loginForm = createLoginForm();
 const welcome = h("main", {});
-const logout = logoutButton();
-
-// renders inital page with login and signup buttons
-const app = document.querySelector("#app");
-app.append(loginForm);
+// const logout = logoutButton();
 
 
 // Function to verify/authenticate user
@@ -21,7 +20,13 @@ if (token) {
     });
 }
 
-function displayLogin() {
+
+function displayLogin(){
+    app.innerHTML="";
+    app.append(loginForm)
+}
+
+function createLoginForm() {
     return h(
         "form", {
         id: "loginForm", // correct id??
@@ -29,14 +34,15 @@ function displayLogin() {
             event.preventDefault();
             const email = event.target.elements.email.value;
             const password = event.target.elements.password.value;
-            login(email, password).then((user) => {
-                window.localStorage.setItem("user-token", user.access_token);
+            login(email, password)
+            // .then((token) => {
+            //     window.localStorage.setItem("user-token", user.access_token);
 
-                const message = h("span", {}, `Greetings Earthling ${user.name}!`);
-                welcome.innerHTML = "";
-                welcome.append(message, logout);
-                loginForm.replaceWith(welcome);
-            });
+            //     const message = h("span", {}, `Greetings Earthling ${user.name}!`);
+            //     welcome.innerHTML = "";
+            //     welcome.append(message, logout);
+            //     loginForm.replaceWith(welcome);
+            // });
         },
     },
         h("label", { for: "email" }, "Email"),
@@ -58,15 +64,23 @@ function displayLogin() {
     );
 }
 
-function LogoutButton() {
-    return h(
-        "button",
-        {
-            onclick: () => {
-                window.localStorage.removeItem("token");
-                welcome.replaceWith(loginForm);
-            },
-        },
-        "Log out"
-    );
+function login(){
+    console.log("login");
 }
+
+
+
+// function LogoutButton() {
+//     return h(
+//         "button",
+//         {
+//             onclick: () => {
+//                 window.localStorage.removeItem("token");
+//                 welcome.replaceWith(loginForm);
+//             },
+//         },
+//         "Log out"
+//     );
+// }
+
+export { displayLogin, login };
