@@ -12,6 +12,7 @@ displayIndex();
 
 function createIndex() {
     return h("section", {}, 
+        h("img", {src: "images/alien.png", class: "alien", alt: "Alien with world in it's hands"}, ),
         h("button", {
             class: "login",
             onclick: () => 
