@@ -11,7 +11,6 @@ A single-page app which uses the endpoints of a [travel destinations API]() we c
 
 ### Abduction guidelines:
 - *Clone* this repo
-- Run npm install
 - Start live server to view the site on your browser
 - Click on the title to refresh the page
 
