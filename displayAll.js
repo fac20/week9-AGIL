@@ -1,19 +1,8 @@
-// displayAll()
-// Fetch pall the posts from the API 
-// Insert them into template ? 
-// Append to page 
 const app = document.querySelector(".app")
 import { request } from "./api.js";
 import {h} from "./create-element.js"
 
 const allDestinations = displayAllHtml();
-
-function displayDestinations() {
-    return request("https://destinationapiagil.herokuapp.com/", {
-      method: "GET",
-      headers: { "content-type": "application/json" }
-    });
-}
 
 export default function displayAll(){
     app.innerHTML = "";
@@ -22,13 +11,23 @@ export default function displayAll(){
 };
 
 function displayAllHtml(){
-    return h("section", {class: "allDestinations"}, 
+    return request("https://destinationapiagil.herokuapp.com/")
+        .then(res => {
+            let section = h("section", {class: "allDestinations"} )
 
-    displayDestinations()
-        .then(res =>{
-            console.log(res)
+            console.log(res);
                 // res is an array of objects
-                res.map(result => {return h("div", {class: "destination"}, result)} )                        
-        })
-    )
+                res.map((result) => {
+                    const card = h("div", {class: "card"},
+                         h("h2", {}, `Destination: ${result.text_content}`),
+                         h("p", {},  `flight duration: ${result.flight_time}`),
+                         h("p", {},  `flight cost: ${result.flight_cost}`)
+                         )
+                    section.append( h("h2", {class: "destinations"}, card));
+                })
+                // create add destination button
+                // create log out button
+                app.append(section);
+        })                  
+ 
 }

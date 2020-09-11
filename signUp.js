@@ -63,7 +63,7 @@ function createSignUpForm() {
 
 
 function signup(username, age, email, password) {
-    return fetch("https://destinationapiagil.herokuapp.com/signup", {
+    return request("https://destinationapiagil.herokuapp.com/signup", {
       method: "POST",
       headers: {"content-type": "application/json"},
       body:  JSON.stringify({username, age, email, password})

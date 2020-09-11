@@ -41,7 +41,7 @@ function createLoginForm() {
             login(email, password)
             .then((token) => {
                 console.log(token);
-                window.localStorage.setItem("user-token", token);
+                window.localStorage.setItem("access_token", token);
 
                 const message = h("span", {}, `Greetings Earthling!`);
                 welcome.innerHTML = "";
