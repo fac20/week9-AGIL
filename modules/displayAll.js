@@ -14,8 +14,6 @@ function displayAllHtml(){
     return request("https://destinationapiagil.herokuapp.com/")
         .then(res => {
             let section = h("section", {class: "allDestinations"} )
-
-            console.log(res);
                 // res is an array of objects
                 res.map((result) => {
                     const card = h("div", {class: "card"},
