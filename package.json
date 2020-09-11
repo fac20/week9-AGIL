@@ -2,7 +2,7 @@
   "name": "week9-agil",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "dependencies": {
     "servor": "^4.0.2"
   },
@@ -19,5 +19,5 @@
   "bugs": {
     "url": "https://github.com/fac20/week9-AGIL/issues"
   },
-  "homepage": "https://github.com/fac20/week9-AGIL#readme"
+  "homepage": "https://github.com/fac20/week9-AGIL"
 }

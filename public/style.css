@@ -9,7 +9,6 @@
 }
 
 h1 {
-    /* font-weight: bold; */
     font-family: 'spacesuit', 'Libre Barcode 128 Text', cursive;
     text-align: center;
     font-size: 6rem;
@@ -43,7 +42,7 @@ button {
 
 
 input {
-    width: 40%;
+    width: 90%;
     /* margin: 10px; */
 }
 
@@ -51,12 +50,8 @@ input[type=password] {
     font-family: 'Libre Barcode 128 Text', cursive;
 }
 
-.app {
-    
-}
-
 body {
-    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=82447), auto;
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=82447'), auto;
 }
 
 .alien {
@@ -133,8 +128,8 @@ animation-iteration-count: infinite;
 }
 
 #stars {
-	width: 5px;
-	height: 5px;
+	width: 15px;
+	height: 15px;
 	border-radius: 50%;
 	background-color: white;
 	position: absolute;
