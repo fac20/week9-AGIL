@@ -1,7 +1,8 @@
 # FLYING SAUCERS/ CYBERSPACE NOMADS
 ### Your go to website for out of this world travel destinations!
 
-<MARQUEE>![Outer space-pana (1)](https://user-images.githubusercontent.com/59174800/92815374-15997080-f3bc-11ea-9092-22fe714d3890.png)
+<MARQUEE>![Outer space-pana (1)](https://user-images.githubusercontent.com/59174800/92889831-781b5c80-f40e-11ea-969c-16add5117649.png)
+
 </MARQUEE>
 
 A single-page app which uses the endpoints of a [travel destinations API]() we created last week.
@@ -20,9 +21,6 @@ A single-page app which uses the endpoints of a [travel destinations API]() we c
 - Read previous weeks SGCs
 - Reading conventional commits article and implementing it.
 
-## Prototype:
-
-
 
 
 ### Acceptance Criteria
@@ -38,12 +36,6 @@ A single-page app which uses the endpoints of a [travel destinations API]() we c
 - [ ] Buttons to delete existing resources
 - [ ] Form for updating existing resources 
 
-
-## The mad scientists: 
-Facilitator: Amber   
-Design: Terry   
-Deployment: Jessica  
-Quality: Khadija  
 
 ## Crazy 8s
 ![Screenshot 2020-09-10 at 23 16 46](https://user-images.githubusercontent.com/36554605/92815036-c2272280-f3bb-11ea-9d16-f53472657bb7.png)
@@ -111,6 +103,13 @@ Body:
 "flight_time": 
 "flight_cost":
 }
+
+## The mad scientists: 
+Facilitator: Amber   
+Design: Terry   
+Deployment: Jessica  
+Quality: Khadija  
+
 
 ## Tools 
 - html, css and vanilla javascript 
