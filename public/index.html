@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Press+Start+2P&display=swap" rel="stylesheet">
-    
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h1><a onClick="window.location.reload();" tabindex="1"> Whisk me away </a></h1>
-    <div class="app">
-        <audio controls="controls" src="ladies_night.mp3" id="my_audio" autoplay="autoplay"></audio>
-    </div>
-    <div id="bg"></div>
-	<div id="stars" class="star-a"></div>
-	<div id="stars" class="star-b"></div>
-	<div id="stars" class="star-c"></div>
-	<div id="stars" class="star-d"></div>
-	<div id="stars" class="star-e"></div>
-</body>
-<script type="module" src="../app.js"></script>
-<script type="module" src="../displayAll.js"></script>
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+	</head>
+	<body>
+		<h1>
+			<a onClick="window.location.reload();" tabindex="1">
+				Whisk me away
+			</a>
+		</h1>
+		<div class="app">
+			<audio
+				controls="controls"
+				src="ladies_night.mp3"
+				id="my_audio"
+				autoplay="autoplay"
+			></audio>
+		</div>
+
+		<div id="bg"></div>
+		<div id="stars" class="star-a"></div>
+		<div id="stars" class="star-b"></div>
+		<div id="stars" class="star-c"></div>
+		<div id="stars" class="star-d"></div>
+		<div id="stars" class="star-e"></div>
+	</body>
+	<script type="module" src="../modules/app.js"></script>
 </html>
