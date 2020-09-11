@@ -1,4 +1,4 @@
-# FLYING SAUCERS/ CYBERSPACE NOMADS
+# CYBERSPACE NOMADS
 ### Your go to website for out of this world travel destinations!
 
 <MARQUEE>![Outer space-pana (1)](https://user-images.githubusercontent.com/59174800/92889831-781b5c80-f40e-11ea-969c-16add5117649.png)
